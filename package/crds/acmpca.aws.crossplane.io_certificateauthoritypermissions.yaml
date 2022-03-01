@@ -109,28 +109,9 @@ spec:
                   sourceAccount:
                     description: Calling Account ID
                     type: string
-                  tags:
-                    description: One or more resource tags to associate with the certificateAuthority.
-                    items:
-                      description: Tag represents user-provided metadata that can
-                        be associated
-                      properties:
-                        key:
-                          description: The key name that can be used to look up or
-                            retrieve the associated value.
-                          type: string
-                        value:
-                          description: The value associated with this tag.
-                          type: string
-                      required:
-                      - key
-                      - value
-                      type: object
-                    type: array
                 required:
                 - principal
                 - region
-                - tags
                 type: object
               providerConfigRef:
                 default:
@@ -312,9 +293,28 @@ spec:
                   sourceAccount:
                     description: Calling Account ID
                     type: string
+                  tags:
+                    description: One or more resource tags to associate with the certificateAuthority.
+                    items:
+                      description: Tag represents user-provided metadata that can
+                        be associated
+                      properties:
+                        key:
+                          description: The key name that can be used to look up or
+                            retrieve the associated value.
+                          type: string
+                        value:
+                          description: The value associated with this tag.
+                          type: string
+                      required:
+                      - key
+                      - value
+                      type: object
+                    type: array
                 required:
                 - principal
                 - region
+                - tags
                 type: object
               providerConfigRef:
                 default:

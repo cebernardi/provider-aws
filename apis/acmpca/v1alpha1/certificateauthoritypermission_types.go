@@ -68,9 +68,6 @@ type CertificateAuthorityPermissionParameters struct {
 	// +optional
 	// +immutable
 	SourceAccount *string `json:"sourceAccount,omitempty"`
-
-	// One or more resource tags to associate with the certificateAuthority.
-	Tags []Tag `json:"tags"`
 }
 
 // +kubebuilder:object:root=true
